@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="owlling's personal website">
+    <meta name="keywords" content="owlling">
+    <meta name="author" content="owlling">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>UX.owlling</title>
+    <link rel="shortcut icon" href="res/favicon.ico">
+    <link rel="apple-touch-icon" href="res/favicon.ico">
+    <link rel="ico" href="res/favicon.ico">
+
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation section  -->
+    <div class="header">
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container">
+                <div>
+                    <a href="https://www.owlling.com/" target="black" class="navbar-brand"><img src="res/logo.svg" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="space150"></div>
+
+        <div class="widb enbot">
+        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_h3l2DE.json" speed="1" loop autoplay></lottie-player>
+        <div class="annotation">
+            <annotation>* Cookbook Tabbar #2019.06</annotation>
+        </div>
+        </div>
+        <div class="space120"></div>
+
+        <div class="widb enbot">
+        <div class="gif1 img-details">
+            <img class="vgif1" src="res/images/wpytabbar.gif" class="" oncontextmenu="return false" ondragstart="return false" alt="Image">
+        </div>
+        <div class="annotation">
+            <annotation>* WePeiyang Tabbar #2018.05</annotation>
+        </div>
+        </div>
+        <div class="space120"></div>
+
+        
+    </div>
+
+        
+
+    <footer>
+        <div class="container">
+
+                <div class="footer-copyright">
+                    <h6>Copyright © 2020 <a href="https://www.owlling.com/" target="black">owlling.com</a></h6>
+                </div>
+
+        </div>
+    </footer>
+
+    <div class="scroll-top">
+        <img src="res/up.svg">
+    </div>
+
+
+<!-- SCRIPTS -->
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.list', {
+            delay: 200
+        });
+        $(function() {
+            var start_height = $(document).scrollTop();
+            var navigation_height = $('.header').outerHeight();
+            $(window).scroll(function() {
+                var end_height = $(document).scrollTop();
+                if (end_height > navigation_height) {
+                    $('.header').addClass('hide');
+                } else {
+                    $('.header').removeClass('hide');
+                }
+                if (end_height < start_height) {
+                    $('.header').removeClass('hide');
+                }
+                start_height = $(document).scrollTop();
+            });
+        });
+
+        window.sr = ScrollReveal({
+            reset: true
+        });
+        sr.reveal('.enbot', {
+            duration: 500,//结束时间
+            delay: 0,
+            origin: 'bottom',//方向
+            distance: '20px',//距离
+            scale: 0.96,//缩放
+            opacity: 0,//透明度
+            easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',//贝塞尔
+            reset: false,//初次加载&每次加载
+            mobile: true,//移动设备
+            useDelay: 'always',//动画延迟
+            viewFactor: 0.2,//露出多少时显示
+            viewOffset: {
+                top: 0,
+                right: 0,
+                bottom: 20,
+                left: 0
+            }//方位距离
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
