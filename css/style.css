@@ -158,6 +158,17 @@
      width: 100%;
  }
 
+.video1 {
+     text-align: center;
+     padding: 4%;
+     background: #000;
+ }
+
+ .vvideo1 {
+     width: 60%;
+     background: #000;
+ }
+
 
  /*---------------------------------------
 Main Navigation             
